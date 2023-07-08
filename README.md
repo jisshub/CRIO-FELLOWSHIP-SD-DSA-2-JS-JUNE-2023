@@ -1,5 +1,9 @@
 # DSA 2 B2 JULY 2023
 
+[SESSION-3](#session-3)
+
+[Two Pointer Approach](#two-pointer-approach)
+
 # SESSION 1
 
 # SESSION 3
@@ -148,4 +152,56 @@ In both examples, the two-pointer approach is implemented as follows:
 
 The two-pointer approach leverages the sorted nature of the array and exploits the fact that moving the pointers in certain directions allows us to avoid unnecessary computations, leading to more efficient solutions for specific problem types.
 
+### Question:
+
+Explain two pointer approach using below array and target sum ?
+Array: [2, 4, 5, 8, 9]
+Target Sum: 13
+
+### Solution:
+
+Sure! Let's apply the two-pointer approach to the given array and target sum.
+
+Array: [2, 4, 5, 8, 9]
+Target Sum: 13
+
+1. Start by initializing two pointers, 'left' and 'right,' to the first and last elements of the array, respectively.
+   - 'left' points to 2.
+   - 'right' points to 9.
+
+2. Calculate the sum of the elements pointed by 'left' and 'right':
+   - Current Sum: 2 + 9 = 11
+
+3. Compare the current sum with the target sum (13):
+   - The current sum (11) is less than the target sum (13).
+
+4. Since the current sum is less than the target sum, we need to increase the sum. To achieve that, we move the 'left' pointer one step to the right.
+   - 'left' now points to 4.
+
+5. Calculate the new sum of the elements pointed by 'left' and 'right':
+   - Current Sum: 4 + 9 = 13
+
+6. Compare the current sum with the target sum (13):
+   - The current sum (13) equals the target sum (13).
+
+7. We have found a pair (4, 9) that adds up to the target sum (13). Therefore, we can return true.
+
+In this example, the two-pointer approach allowed us to find a pair in the array that adds up to the given target sum efficiently. The pointers started from different ends of the array and moved towards each other until the sum matched the target or the pointers met. By utilizing the fact that the array was sorted, we were able to minimize the number of comparisons and optimize the solution.
+
+### Time Complexity
+
+The time complexity of the two-pointer approach for finding a pair with a given sum in an unsorted array is O(n^2).
+
+In the scenario where the array is unsorted, we cannot utilize the two-pointer approach optimally. Instead, we would need to compare each element with every other element to find the pair that adds up to the target sum.
+
+Here's a step-by-step breakdown of the approach for an unsorted array:
+
+1. Start with the first element and compare it with all other elements in the array.
+2. Move to the second element and compare it with the remaining elements.
+3. Repeat this process for each element in the array, comparing it with the remaining elements.
+4. If at any point we find a pair that adds up to the target sum, we can return true.
+
+This approach requires nested loops, resulting in a time complexity of O(n^2), where n is the size of the array. The first loop iterates n times, and for each iteration, the second loop iterates n-1 times on average.
+
+It's important to note that the two-pointer approach is most efficient when the array is sorted, as it allows us to optimize the search by moving the pointers strategically. When the array is unsorted, alternative approaches such as hashing or using a set can provide more efficient solutions with a time complexity of O(n).
 
