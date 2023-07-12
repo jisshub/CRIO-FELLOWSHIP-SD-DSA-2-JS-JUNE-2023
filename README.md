@@ -376,3 +376,8 @@ Array: [10, 20, 10, 5, 15]
      - By subtracting prefix[1] from prefix[4], we cancel out the sum of elements before index 2, leaving only the sum of the desired subarray.
 
 The prefix sum concept allows us to calculate cumulative sums efficiently and provides a way to answer subarray sum queries in constant time complexity. By precomputing the prefix sum array, we can eliminate the need for repetitive sum calculations and solve various subarray sum problems more efficiently.
+
+<!-- time: 23:00 -->
+
+https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
+
