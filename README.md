@@ -297,7 +297,7 @@ def countSubarraysWithSum(arr, target_sum):
     return count
 ```
 
-### Example:
+### Example 1:
 
 Let's understand the prefix sum approach using the given array:
 
@@ -333,3 +333,46 @@ Array: [10, 4, 50, 6, 60, 7]
 
 The prefix sum approach allows us to preprocess the array and calculate cumulative sums efficiently. This precomputation enables us to answer subarray sum queries in constant time complexity, regardless of the size of the subarray.              
 
+### Example 2:
+
+Sure! Let's understand the prefix sum concept using the given array:
+
+Array: [10, 20, 10, 5, 15]
+
+1. Initialize a prefix sum array, 'prefix,' with the same size as the input array, filled with zeros.
+
+   - prefix = [0, 0, 0, 0, 0]
+
+2. Calculate the prefix sum for the original array by iterating through it:
+
+   - For each index 'i' from 0 to n-1 (where n is the size of the array):
+
+     - If 'i' is 0, set prefix[0] = arr[0].
+
+       - prefix = [10, 0, 0, 0, 0]
+
+     - Otherwise, set prefix[i] = prefix[i-1] + arr[i].
+
+       - prefix = [10, 30, 40, 45, 60]
+
+     - By doing this, each element in the prefix sum array represents the sum of all elements from index 0 up to that particular index in the original array.
+
+3. Now, the prefix sum array is ready, and we can utilize it to answer various subarray sum queries efficiently.
+
+   - For example, if we want to find the sum of elements in the subarray from index 1 to index 3:
+
+     - The sum is given by prefix[3] - prefix[0].
+
+       - sum = prefix[3] - prefix[0] = 45 - 10 = 35
+
+     - By subtracting prefix[0] from prefix[3], we cancel out the sum of elements before index 1, leaving only the sum of the desired subarray.
+
+   - Similarly, if we want to find the sum of elements in the subarray from index 2 to index 4:
+
+     - The sum is given by prefix[4] - prefix[1].
+
+       - sum = prefix[4] - prefix[1] = 60 - 30 = 30
+
+     - By subtracting prefix[1] from prefix[4], we cancel out the sum of elements before index 2, leaving only the sum of the desired subarray.
+
+The prefix sum concept allows us to calculate cumulative sums efficiently and provides a way to answer subarray sum queries in constant time complexity. By precomputing the prefix sum array, we can eliminate the need for repetitive sum calculations and solve various subarray sum problems more efficiently.
