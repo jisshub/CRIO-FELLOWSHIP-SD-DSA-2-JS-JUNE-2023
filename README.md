@@ -6,7 +6,15 @@
 
 # SESSION 1
 
+# SESSION 3
+
+[Two Pointer Approach](#two-pointer-approach)
+
 # SESSION 4
+
+[Prefix Sum](#prefix-sum)
+
+[Suffix Sum](#suffix-sum)
 
 ## Two Pointer Approach
 
@@ -443,4 +451,58 @@ Array: [10, 20, 10, 5, 15]
 
    - Each element in the suffix sum array represents the sum of all elements from that index up to the last index in the original array.
 
+
+## Finding Suffix Sum for Another Array
+
+Certainly! Let's consider another example to understand the concept of suffix sum on an array:
+
+Array: [5, 2, 6, 1, 9]
+
+1. Initialize a suffix sum array, 'suffix,' with the same size as the input array, filled with zeros.
+
+   - suffix = [0, 0, 0, 0, 0]
+
+2. Calculate the suffix sum for the original array by iterating through it in reverse:
+
+   - Start from the last index (index 4 in this case) and move towards the beginning.
+
+   - For each index 'i' from 4 to 0:
+
+     - The suffix sum at the last index is equal to the element at that index itself.
+
+       - suffix[4] = arr[4] = 9
+
+     - Now, let's calculate the suffix sum for index 3:
+       - suffix[3] = arr[3] + suffix[4]
+
+       - suffix[3] = 1 + 9 = 10
+
+       - The suffix sum at index 3 is the sum of the current element (1) and the suffix sum at the next index (9).
+
+     - Moving to index 2:
+       - suffix[2] = arr[2] + suffix[3]
+
+       - suffix[2] = 6 + 10 = 16
+
+       - The suffix sum at index 2 is the sum of the current element (6) and the suffix sum at the next index (10).
+
+     - Continuing to index 1:
+       - suffix[1] = arr[1] + suffix[2]
+
+       - suffix[1] = 2 + 16 = 18
+
+       - The suffix sum at index 1 is the sum of the current element (2) and the suffix sum at the next index (16).
+
+     - Finally, at index 0:
+       - suffix[0] = arr[0] + suffix[1]
+
+       - suffix[0] = 5 + 18 = 23
+
+       - The suffix sum at index 0 is the sum of the current element (5) and the suffix sum at the next index (18).
+
+3. Now, the suffix sum array is ready, and we have calculated the cumulative sums starting from the end of the array.
+
+   - suffix = [23, 18, 16, 10, 9]
+
+   - Each element in the suffix sum array represents the sum of all elements from that index up to the last index in the original array.
 
