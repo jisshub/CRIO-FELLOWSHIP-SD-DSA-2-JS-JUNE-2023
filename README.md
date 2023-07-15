@@ -21,6 +21,11 @@ https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
 [Kadanes Algorithm](#kadanes-algorithm)
 
+# SESSION 5
+
+[Sliding Window Concept](#sliding-window-concept)
+
+
 ## Two Pointer Approach
 
 In 2 pointer approach, 2-pointers point to specific indices or specific positions in the array.
@@ -554,4 +559,74 @@ Step 3: After completing the iteration, 'max_sum' will hold the maximum subarray
 
 The workflow of Kadane's algorithm involves iterating through the array and comparing the current element with the sum of the current element and the previous 'current_sum'. By choosing the maximum of the two, we update 'current_sum' and keep track of the maximum subarray sum encountered so far in 'max_sum'.
 
-I hope this explanation helps you understand the workflow of Kadane's algorithm better. If you have any further questions, feel free to ask!
+## SESSION 5
+
+### Sliding Window Concept
+
+Certainly! I'll explain the sliding window approach step by step using simple terms. The sliding window technique is used to efficiently process subarrays or substrings of a given array or string. Let's go through it:
+
+Given an array, let's say: [3, 1, 7, 2, 5, 8, 4]
+
+1. Initialize two pointers, 'start' and 'end,' to the first element of the array.
+
+   - start = 0 (index of the first element)
+   - end = 0
+
+2. Initialize a variable, 'window_sum,' to the value of the first element in the array.
+
+   - window_sum = 3 (the first element)
+
+3. Iterate through the array, moving the 'end' pointer to the right.
+
+   - For each step, update 'window_sum' by adding the element at the 'end' pointer.
+
+     - For example, when 'end' is at index 1:
+       - window_sum += 1 (add the element at index 1 to 'window_sum')
+
+   - Check if the current window satisfies the desired condition or if it needs adjustment.
+
+     - If the current window satisfies the condition, update the result or perform any necessary operations.
+     - If the current window does not satisfy the condition, move the 'start' pointer to the right, adjusting the window.
+
+4. Repeat the iteration until the 'end' pointer reaches the end of the array.
+
+5. After the iteration, the result or desired output is available based on the operations performed during the iteration.
+
+Now, let's work through an example using the array [3, 1, 7, 2, 5, 8, 4] and the condition of finding the maximum sum of a subarray of length 3.
+
+1. Initialize 'start' and 'end' as 0, and 'window_sum' as the value of the first element.
+
+   - start = 0
+   - end = 0
+   - window_sum = 3
+
+2. Move the 'end' pointer to the right and update 'window_sum'.
+
+   - When 'end' is at index 1:
+     - window_sum += 1, so window_sum becomes 4
+
+3. Check if the current window satisfies the desired condition (subarray length = 3).
+
+   - Since the length of the current window is not yet 3, we continue to the next step.
+
+4. Repeat steps 2 and 3, moving the 'end' pointer and updating 'window_sum'.
+
+   - When 'end' is at index 2:
+     - window_sum += 7, so window_sum becomes 11
+
+   - When 'end' is at index 3:
+     - window_sum += 2, so window_sum becomes 13
+
+   - When 'end' is at index 4:
+     - Since the length of the current window is now 3, we can perform the desired operation (in this case, finding the maximum sum of the subarray).
+
+     - We can store or update the maximum sum, perform calculations, or any other operation required based on the current window.
+
+5. Move the 'start' pointer to the right to adjust the window.
+
+   - When 'start' is moved to index 1:
+     - Subtract the element at the 'start' index from 'window_sum'.
+
+   - Repeat steps 2-4 until the 'end' pointer reaches the end of the array.
+
+By sliding the window and adjusting the 'start' and 'end' pointers, we efficiently process subarrays or substrings of the given array or string. The specific operations or conditions inside the window can vary depending on the problem requirements.
