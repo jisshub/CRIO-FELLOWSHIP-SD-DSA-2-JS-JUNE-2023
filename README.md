@@ -1,5 +1,8 @@
 # DSA 2 B2 JULY 2023
 
+https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
+
+
 [SESSION-3](#session-3)
 
 [Two Pointer Approach](#two-pointer-approach)
@@ -15,6 +18,8 @@
 [Prefix Sum](#prefix-sum)
 
 [Suffix Sum](#suffix-sum)
+
+[Kadanes Algorithm](#kadanes-algorithm)
 
 ## Two Pointer Approach
 
@@ -387,8 +392,6 @@ The prefix sum concept allows us to calculate cumulative sums efficiently and pr
 
 <!-- time: 23:00 -->
 
-https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
-
 ## Suffix Sum
 
 - Opposite of Prefix Sum.
@@ -506,3 +509,49 @@ Array: [5, 2, 6, 1, 9]
 
    - Each element in the suffix sum array represents the sum of all elements from that index up to the last index in the original array.
 
+## Kadanes Algorithm
+
+Certainly! Let's go through the steps of Kadane's algorithm again, using the example [−2, 1, −3, 4, −1, 2, 1, −5, 4]:
+
+Step 1: Initialize 'max_sum' and 'current_sum' as -2 (the first element of the array).
+
+   - max_sum = -2
+   - current_sum = -2
+
+Step 2: Iterate through the array, starting from the second element.
+
+   - For each element 'num' from the second element to the end of the array:
+   
+     Iteration 1: Element 1 (Index 1)
+     
+     - Compare the current element (1) with the sum of the current element and 'current_sum'.
+       - current_sum = max(1, 1 + (-2)) = max(1, -1) = 1 (choose the current element)
+     
+     - Update the maximum sum by taking the maximum of 'max_sum' and 'current_sum'.
+       - max_sum = max(-2, 1) = 1 (update 'max_sum' with the current maximum sum encountered)
+
+     Iteration 2: Element -3 (Index 2)
+
+     - Compare the current element (-3) with the sum of the current element and 'current_sum'.
+       - current_sum = max(-3, -3 + 1) = max(-3, -2) = -2 (choose the sum of the current element and 'current_sum')
+
+     - Update the maximum sum by taking the maximum of 'max_sum' and 'current_sum'.
+       - max_sum = max(1, -2) = 1 (no change to 'max_sum')
+
+     Iteration 3: Element 4 (Index 3)
+
+     - Compare the current element (4) with the sum of the current element and 'current_sum'.
+       - current_sum = max(4, 4 + (-2)) = max(4, 2) = 4 (choose the current element)
+
+     - Update the maximum sum by taking the maximum of 'max_sum' and 'current_sum'.
+       - max_sum = max(1, 4) = 4 (update 'max_sum' with the current maximum sum encountered)
+
+     ...and so on, continuing these steps for each element of the array.
+
+Step 3: After completing the iteration, 'max_sum' will hold the maximum subarray sum.
+
+   - In our example, the maximum subarray sum is 6, which occurs in the subarray [4, -1, 2, 1].
+
+The workflow of Kadane's algorithm involves iterating through the array and comparing the current element with the sum of the current element and the previous 'current_sum'. By choosing the maximum of the two, we update 'current_sum' and keep track of the maximum subarray sum encountered so far in 'max_sum'.
+
+I hope this explanation helps you understand the workflow of Kadane's algorithm better. If you have any further questions, feel free to ask!
