@@ -6,7 +6,7 @@
 
 # SESSION 1
 
-# SESSION 3
+# SESSION 4
 
 ## Two Pointer Approach
 
@@ -380,4 +380,67 @@ The prefix sum concept allows us to calculate cumulative sums efficiently and pr
 <!-- time: 23:00 -->
 
 https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
+
+## Suffix Sum
+
+- Opposite of Prefix Sum.
+
+- In the suffix sum concept, we calculate the cumulative sums starting from the end of the array instead of the beginning. The idea is to store the sums of elements from each index to the end of the array. This allows us to efficiently answer queries about subarray sums that end at a specific index.
+
+Let's understand the suffix sum concept using the given array:
+
+Array: [10, 20, 10, 5, 15]
+
+Certainly! Let's go through the array step by step to understand how the suffix sum is calculated:
+
+Array: [10, 20, 10, 5, 15]
+
+1. Initialize a suffix sum array, 'suffix,' with the same size as the input array, filled with zeros.
+
+   - suffix = [0, 0, 0, 0, 0]
+
+2. Calculate the suffix sum for the original array by iterating through it in reverse:
+
+   - Start from the last index (index 4 in this case) and move towards the beginning.
+
+   - For each index 'i' from 4 to 0:
+
+     - The suffix sum at the last index is equal to the element at that index itself.
+
+       - suffix[4] = arr[4] = 15
+
+     - Now, let's calculate the suffix sum for index 3:
+       - suffix[3] = arr[3] + suffix[4]
+
+       - suffix[3] = 5 + 15 = 20
+
+       - The suffix sum at index 3 is the sum of the current element (5) and the suffix sum at the next index (15).
+
+     - Moving to index 2:
+       - suffix[2] = arr[2] + suffix[3]
+
+       - suffix[2] = 10 + 20 = 30
+
+       - The suffix sum at index 2 is the sum of the current element (10) and the suffix sum at the next index (20).
+
+     - Continuing to index 1:
+       - suffix[1] = arr[1] + suffix[2]
+
+       - suffix[1] = 20 + 30 = 50
+
+       - The suffix sum at index 1 is the sum of the current element (20) and the suffix sum at the next index (30).
+
+     - Finally, at index 0:
+       - suffix[0] = arr[0] + suffix[1]
+
+       - suffix[0] = 10 + 50 = 60
+
+       - The suffix sum at index 0 is the sum of the current element (10) and the suffix sum at the next index (50).
+
+3. Now, the suffix sum array is ready, and we have calculated the cumulative sums starting from the end of the array.
+
+   - suffix = [60, 50, 30, 20, 15]
+
+   - Each element in the suffix sum array represents the sum of all elements from that index up to the last index in the original array.
+
 
