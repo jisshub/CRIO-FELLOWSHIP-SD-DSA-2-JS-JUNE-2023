@@ -25,6 +25,10 @@ https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
 [Sliding Window Concept](#sliding-window-concept)
 
+# SESSION 6
+
+[Bubble Sort](#bubble-sort)
+
 
 ## Two Pointer Approach
 
@@ -630,3 +634,96 @@ Now, let's work through an example using the array [3, 1, 7, 2, 5, 8, 4] and the
    - Repeat steps 2-4 until the 'end' pointer reaches the end of the array.
 
 By sliding the window and adjusting the 'start' and 'end' pointers, we efficiently process subarrays or substrings of the given array or string. The specific operations or conditions inside the window can vary depending on the problem requirements.
+
+# SESSION 6
+
+## SORTING
+
+Sorting Types
+
+   1. Comparison Sort (Bubble Sort)
+   2. Count Sort (Radix Sort, Count Sort)
+
+### Inplace Sort 
+
+  Sort the elements in the given array itself.
+
+  [2, 1, 3] -> [1, 2, 3]
+
+  We just rearrange the elements in increasing order.
+
+  Eg: Bubble Sort, Insertion Sort and Selection Sort (Iterative Strategy)
+
+### Not In Place Sort
+
+  We make use of another array to sort the elements.
+
+  Eg: Merge Sort and Quick Sort (Recursive Strategy)
+
+
+## Bubble Sort
+
+Certainly! Bubble sort is a simple and intuitive sorting algorithm commonly used in algorithmic problem-solving. It repeatedly swaps adjacent elements if they are in the wrong order until the entire array is sorted. Let's understand the bubble sort algorithm with an example.
+
+Example: Sorting an Array using Bubble Sort
+
+Consider the following array:
+
+Array: [5, 3, 8, 2, 1]
+
+1. Start by comparing the first and second elements. If the second element is smaller, swap them.
+
+   - Compare 5 and 3: Since 3 is smaller, swap them.
+     - Array after the swap: [3, 5, 8, 2, 1]
+
+2. Move to the next pair (second and third elements) and compare them. If the second element is smaller, swap them.
+
+   - Compare 5 and 8: Since they are in the correct order, no swap is needed.
+     - Array remains: [3, 5, 8, 2, 1]
+
+3. Continue this process, comparing adjacent elements and swapping if necessary, until the end of the array.
+
+   - Compare 8 and 2: Swap them.
+     - Array after the swap: [3, 5, 2, 8, 1]
+
+   - Compare 8 and 1: Swap them.
+     - Array after the swap: [3, 5, 2, 1, 8]
+
+4. After the first iteration, the largest element (8) is in its correct position at the end of the array.
+
+5. Repeat the process for the remaining unsorted portion of the array (excluding the last element).
+
+   - Compare 3 and 5: Since they are in the correct order, no swap is needed.
+     - Array remains: [3, 5, 2, 1, 8]
+
+   - Compare 5 and 2: Swap them.
+     - Array after the swap: [3, 2, 5, 1, 8]
+
+   - Compare 5 and 1: Swap them.
+     - Array after the swap: [3, 2, 1, 5, 8]
+
+6. Repeat the process until the entire array is sorted.
+
+   - Compare 3 and 2: Swap them.
+     - Array after the swap: [2, 3, 1, 5, 8]
+
+   - Compare 3 and 1: Swap them.
+     - Array after the swap: [2, 1, 3, 5, 8]
+
+   - Compare 5 and 1: Swap them.
+     - Array after the swap: [2, 1, 3, 5, 8]
+
+   - No more swaps are needed since the array is now sorted.
+
+The final sorted array is: [1, 2, 3, 5, 8].
+
+The bubble sort algorithm works by repeatedly traversing the array and comparing adjacent elements. It swaps them if they are in the wrong order, pushing the larger elements towards the end of the array. This process is repeated until the entire array is sorted.
+
+It's worth noting that bubble sort has a time complexity of O(n^2) in the worst and average cases, where n is the size of the array. Additionally, it is an in-place sorting algorithm, meaning it sorts the elements within the original array without requiring additional memory. However, bubble sort is not considered efficient for large datasets and is mostly used for educational purposes or when dealing with small arrays.
+
+
+
+
+
+  
+  
