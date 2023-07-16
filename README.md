@@ -734,6 +734,68 @@ It's worth noting that bubble sort has a time complexity of O(n^2) in the worst 
 
 
 
+Certainly! Insertion sort is a simple and efficient sorting algorithm commonly used in algorithmic problem-solving. It works by dividing the array into two parts: a sorted subarray and an unsorted subarray. The algorithm iterates through the unsorted subarray, selecting one element at a time and inserting it into its correct position in the sorted subarray. Let's understand the insertion sort algorithm with an example.
 
+Example: Sorting an Array using Insertion Sort
+
+Consider the following array:
+
+Array: [5, 3, 8, 2, 1]
+
+1. Start with the second element (index 1) and assume it is in the correct position within the sorted subarray.
+
+2. Compare the selected element with the elements in the sorted subarray (to its left) and insert it into the correct position.
+
+   - Compare 3 with 5: Since 3 is smaller, shift 5 to the right.
+     - Array after the shift: [3, 5, 8, 2, 1]
+
+3. The selected element (3) is now in its correct position within the sorted subarray.
+
+4. Repeat steps 2 and 3 for the remaining unsorted subarray.
+
+   - Select the third element (index 2) and compare it with the elements in the sorted subarray.
+
+   - Compare 8 with 5: Since 8 is larger, leave it in its current position.
+
+   - The selected element (8) is already in its correct position within the sorted subarray.
+
+   - Array remains: [3, 5, 8, 2, 1]
+
+5. Select the fourth element (index 3) and compare it with the elements in the sorted subarray.
+
+   - Compare 2 with 8: Since 2 is smaller, shift 8 to the right.
+     - Array after the shift: [3, 5, 2, 8, 1]
+
+   - Compare 2 with 5: Since 2 is smaller, shift 5 to the right.
+     - Array after the shift: [3, 2, 5, 8, 1]
+
+   - Compare 2 with 3: Since 2 is smaller, shift 3 to the right.
+     - Array after the shift: [2, 3, 5, 8, 1]
+
+6. The selected element (2) is now in its correct position within the sorted subarray.
+
+7. Repeat steps 2 and 3 for the remaining unsorted subarray.
+
+   - Select the fifth element (index 4) and compare it with the elements in the sorted subarray.
+
+   - Compare 1 with 8: Since 1 is smaller, shift 8 to the right.
+     - Array after the shift: [2, 3, 5, 1, 8]
+
+   - Compare 1 with 5: Since 1 is smaller, shift 5 to the right.
+     - Array after the shift: [2, 3, 1, 5, 8]
+
+   - Compare 1 with 3: Since 1 is smaller, shift 3 to the right.
+     - Array after the shift: [2, 1, 3, 5, 8]
+
+   - Compare 1 with 2: Since 1 is smaller, shift 2 to the right.
+     - Array after the shift: [1, 2, 3, 5, 8]
+
+8. The selected element (1) is now in its correct position within the sorted subarray.
+
+9. No more unsorted elements remain, and the array is now sorted.
+
+The final sorted array is: [1, 2, 3, 5, 8].
+
+The insertion sort algorithm works by iteratively selecting an element from the unsorted subarray and inserting it into its correct position within the sorted subarray. This process continues until all elements are in their correct positions. Insertion sort is efficient for small datasets or partially sorted datasets but can be less efficient for large datasets. It has a time complexity of O(n^2) in the worst case, where n is the size of the array. However, it has a best-case time complexity of O(n) when the array is already sorted or nearly sorted.
   
-  
+### Selection Sort
