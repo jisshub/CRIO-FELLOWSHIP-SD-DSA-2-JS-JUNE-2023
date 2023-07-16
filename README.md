@@ -29,6 +29,9 @@ https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
 [Bubble Sort](#bubble-sort)
 
+[Insertion Sort](#insertion-sort)
+
+[Selection Sort](#selection-sort)
 
 ## Two Pointer Approach
 
@@ -799,3 +802,6 @@ The final sorted array is: [1, 2, 3, 5, 8].
 The insertion sort algorithm works by iteratively selecting an element from the unsorted subarray and inserting it into its correct position within the sorted subarray. This process continues until all elements are in their correct positions. Insertion sort is efficient for small datasets or partially sorted datasets but can be less efficient for large datasets. It has a time complexity of O(n^2) in the worst case, where n is the size of the array. However, it has a best-case time complexity of O(n) when the array is already sorted or nearly sorted.
   
 ### Selection Sort
+
+<!-- time: 56:00 -->
+
