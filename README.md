@@ -704,23 +704,33 @@ Array: [5, 3, 8, 2, 1]
 
 6. Repeat the process until the entire array is sorted.
 
-   - Compare 3 and 2: Swap them.
-     - Array after the swap: [2, 3, 1, 5, 8]
+  - Compare 3 and 2: Swap them.
+    - Array after the swap: [2, 3, 1, 5, 8]
 
-   - Compare 3 and 1: Swap them.
-     - Array after the swap: [2, 1, 3, 5, 8]
 
-   - Compare 5 and 1: Swap them.
-     - Array after the swap: [2, 1, 3, 5, 8]
+  - Compare 3 and 1: Swap them.
+    - Array after the swap: [2, 1, 3, 5, 8]
 
-   - No more swaps are needed since the array is now sorted.
+
+  - Compare 3 and 5: Since they are in the correct order, no swap is needed.
+    - Array remains: [2, 1, 3, 5, 8]
+
+
+  - Compare 5 and 8: Since they are in the correct order, no swap is needed.
+    - Array remains: [2, 1, 3, 5, 8]
+
+7. Compare 2 and 1: Swap them.
+  - Array after the swap: [1, 2, 3, 5, 8]
+
+- No more swaps are needed since the array is now sorted.
 
 The final sorted array is: [1, 2, 3, 5, 8].
 
-The bubble sort algorithm works by repeatedly traversing the array and comparing adjacent elements. It swaps them if they are in the wrong order, pushing the larger elements towards the end of the array. This process is repeated until the entire array is sorted.
+The bubble sort algorithm repeatedly traverses the array and compares adjacent elements. It swaps them if they are in the wrong order, pushing the larger elements towards the end of the array. This process is repeated until the entire array is sorted.
 
 It's worth noting that bubble sort has a time complexity of O(n^2) in the worst and average cases, where n is the size of the array. Additionally, it is an in-place sorting algorithm, meaning it sorts the elements within the original array without requiring additional memory. However, bubble sort is not considered efficient for large datasets and is mostly used for educational purposes or when dealing with small arrays.
 
+### Insertion Sort
 
 
 
