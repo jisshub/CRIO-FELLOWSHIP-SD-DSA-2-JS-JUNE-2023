@@ -33,6 +33,8 @@ https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
 [Selection Sort](#selection-sort)
 
+[Merge Sort](#merge-sort)
+
 ## Two Pointer Approach
 
 In 2 pointer approach, 2-pointers point to specific indices or specific positions in the array.
@@ -882,4 +884,84 @@ Array: [5, 3, 8, 2, 1]
 The final sorted array is: [1, 2, 3, 5, 8].
 
 The selection sort algorithm works by repeatedly finding the minimum element from the unsorted part and swapping it with the element at the beginning of the unsorted part. This process continues until the entire array is sorted. Selection sort has a time complexity of O(n^2) in all cases, where n is the size of the array. It is an in-place sorting algorithm, meaning it sorts the elements within the original array without requiring additional memory. However, like other quadratic sorting algorithms, it is not considered efficient for large datasets but can be useful for small arrays or as a step within other sorting algorithms.
+
+### Example 2 - Selection Sort
+
+Certainly! Here's another example to practice selection sort:
+
+Example: Sorting an Array using Selection Sort
+
+Consider the following array:
+
+Array: [12, 45, 6, 23, 9]
+
+1. Start with the first element as the minimum element.
+
+2. Iterate through the unsorted part of the array to find the minimum element.
+
+   - Compare 12 with 45: 12 is smaller, so it remains the minimum.
+
+   - Compare the current minimum (12) with 6: 6 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (6) with 23: 6 is still the minimum.
+
+   - Compare the current minimum (6) with 9: 6 is still the minimum.
+
+3. After iterating through the unsorted part, swap the minimum element (6) with the first element of the unsorted part.
+
+   - Swap 12 with 6.
+     - Array after the swap: [6, 45, 12, 23, 9]
+
+4. The first element (6) is now in its correct sorted position.
+
+5. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (45, 12, 23, 9).
+
+   - Compare 45 with 12: 12 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (12) with 23: 12 is still the minimum.
+
+   - Compare the current minimum (12) with 9: 9 is smaller, so it becomes the new minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (9) with the first element of the unsorted part.
+
+     - Swap 45 with 9.
+       - Array after the swap: [6, 9, 12, 23, 45]
+
+   - The second element (9) is now in its correct sorted position.
+
+6. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (12, 23, 45).
+
+   - Compare 12 with 23: 12 is smaller, so it remains the minimum.
+
+   - Compare the current minimum (12) with 45: 12 is still the minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (12) with the first element of the unsorted part.
+
+     - No swap is needed since the minimum element is already at the correct position.
+
+   - The third element (12) is now in its correct sorted position.
+
+7. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (23, 45).
+
+   - Compare 23 with 45: 23 is smaller, so it remains the minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (23) with the first element of the unsorted part.
+
+     - No swap is needed since the minimum element is already at the correct position.
+
+   - The fourth element (23) is now in its correct sorted position.
+
+8. No more unsorted elements remain, and the array is now sorted.
+
+The final sorted array is: [6, 9, 12, 23, 45].
+
+I hope this additional example helps you practice selection sort. Remember to iterate through the unsorted part of the array, find the minimum element, and swap it with the first element of the unsorted part. Repeat these steps until the entire array is sorted. 
+
+## Merge Sort
 
