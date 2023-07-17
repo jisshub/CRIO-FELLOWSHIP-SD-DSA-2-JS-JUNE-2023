@@ -805,3 +805,81 @@ The insertion sort algorithm works by iteratively selecting an element from the 
 
 <!-- time: 56:00 -->
 
+Certainly! Selection sort is a simple sorting algorithm commonly used in algorithmic problem-solving. It works by repeatedly finding the minimum element from the unsorted part of the array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted. Let's understand the selection sort algorithm with an example.
+
+Example: Sorting an Array using Selection Sort
+
+Consider the following array:
+
+Array: [5, 3, 8, 2, 1]
+
+1. Start with the first element as the minimum element.
+
+2. Iterate through the unsorted part of the array to find the minimum element.
+
+   - Compare 5 with 3: 3 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (3) with 8: 3 is still the minimum.
+
+   - Compare the current minimum (3) with 2: 2 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (2) with 1: 1 is smaller, so it becomes the new minimum.
+
+3. After iterating through the unsorted part, swap the minimum element (1) with the first element of the unsorted part.
+
+   - Swap 5 with 1.
+     - Array after the swap: [1, 3, 8, 2, 5]
+
+4. The first element (1) is now in its correct sorted position.
+
+5. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (3, 8, 2, 5).
+
+   - Compare 3 with 8: 3 is still the minimum.
+
+   - Compare the current minimum (3) with 2: 2 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (2) with 5: 2 is still the minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (2) with the first element of the unsorted part.
+
+     - Swap 3 with 2.
+       - Array after the swap: [1, 2, 8, 3, 5]
+
+   - The second element (2) is now in its correct sorted position.
+
+6. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (8, 3, 5).
+
+   - Compare 8 with 3: 3 is smaller, so it becomes the new minimum.
+
+   - Compare the current minimum (3) with 5: 3 is still the minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (3) with the first element of the unsorted part.
+
+     - Swap 8 with 3.
+       - Array after the swap: [1, 2, 3, 8, 5]
+
+   - The third element (3) is now in its correct sorted position.
+
+7. Repeat steps 2-4 for the remaining unsorted part of the array.
+
+   - Find the minimum element from the unsorted part (8, 5).
+
+   - Compare 8 with 5: 5 is smaller, so it becomes the new minimum.
+
+   - After iterating through the unsorted part, swap the minimum element (5) with the first element of the unsorted part.
+
+     - Swap 8 with 5.
+       - Array after the swap: [1, 2, 3, 5, 8]
+
+   - The fourth element (5) is now in its correct sorted position.
+
+8. No more unsorted elements remain, and the array is now sorted.
+
+The final sorted array is: [1, 2, 3, 5, 8].
+
+The selection sort algorithm works by repeatedly finding the minimum element from the unsorted part and swapping it with the element at the beginning of the unsorted part. This process continues until the entire array is sorted. Selection sort has a time complexity of O(n^2) in all cases, where n is the size of the array. It is an in-place sorting algorithm, meaning it sorts the elements within the original array without requiring additional memory. However, like other quadratic sorting algorithms, it is not considered efficient for large datasets but can be useful for small arrays or as a step within other sorting algorithms.
+
