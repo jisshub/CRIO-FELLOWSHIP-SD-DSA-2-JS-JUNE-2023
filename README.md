@@ -35,6 +35,11 @@ https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
 [Merge Sort](#merge-sort)
 
+# SESSION 7
+
+[Merge Sort](#merge-sort)
+
+
 ## Two Pointer Approach
 
 In 2 pointer approach, 2-pointers point to specific indices or specific positions in the array.
