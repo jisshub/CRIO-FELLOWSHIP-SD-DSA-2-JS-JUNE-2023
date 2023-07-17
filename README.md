@@ -965,3 +965,121 @@ I hope this additional example helps you practice selection sort. Remember to it
 
 ## Merge Sort
 
+Certainly! Merge sort is a popular and efficient sorting algorithm based on the divide-and-conquer technique. It works by dividing the array into smaller subarrays, sorting them recursively, and then merging them back together to produce the final sorted array. Let's understand the merge sort algorithm with an example.
+
+Let's break down the merging process in the merge sort algorithm again using the given example.
+
+Consider the following array:
+
+Array: [5, 3, 8, 2, 1]
+
+1. Divide the array into smaller subarrays until each subarray contains only one element.
+
+   - Split the array into two halves: [5, 3] and [8, 2, 1].
+
+   - Continue dividing each subarray until we have subarrays of size 1: [5], [3], [8], [2], [1].
+
+2. Merge the subarrays back together in a sorted order.
+
+   - Merge the two subarrays [5] and [3] into a sorted subarray [3, 5].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 3 is smaller than 5, so we take 3 first, followed by 5.
+     - The merged subarray becomes [3, 5].
+
+   - Merge the subarrays [8] and [2] into a sorted subarray [2, 8].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 2 is smaller than 8, so we take 2 first, followed by 8.
+     - The merged subarray becomes [2, 8].
+
+   - Merge the subarrays [1] and [2, 8] into a sorted subarray [1, 2, 8].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 1 is smaller than 2, so we take 1 first.
+     - Now, we compare the remaining elements: 2 and 8.
+     - 2 is smaller than 8, so we take 2 next, followed by 8.
+     - The merged subarray becomes [1, 2, 8].
+
+3. Repeat the merging process until we obtain the final sorted array.
+
+   - Merge the subarrays [3, 5] and [1, 2, 8] into a sorted subarray [1, 2, 3, 5, 8].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 1 is the smallest element, so we take it first.
+     - Now, we compare the remaining elements: 2 and 3 from the first subarray and 5 and 8 from the second subarray.
+     - 2 is smaller than 3, so we take 2 next, followed by 3.
+     - Finally, we compare the remaining elements: 5 and 8.
+     - 5 is smaller than 8, so we take 5 next, followed by 8.
+     - The merged subarray becomes [1, 2, 3, 5, 8].
+
+4. The final sorted array is: [1, 2, 3, 5, 8].
+
+In the merging process, we compare elements from the two subarrays and take the smaller element first, repeatedly doing this until all elements are merged into a sorted subarray. We then combine the sorted subarrays to obtain the final sorted array.
+
+Here's a step-by-step breakdown of the merge sort algorithm:
+
+1. Divide: Split the array into smaller subarrays until each subarray contains only one element.
+
+2. Sort: Sort the individual subarrays by recursively applying merge sort.
+
+3. Merge: Merge the sorted subarrays back together to create larger sorted subarrays.
+
+4. Repeat steps 2 and 3 until the entire array is sorted.
+
+Merge sort has a time complexity of O(n log n) in all cases, where n is the size of the array. It is a stable sorting algorithm, meaning that the relative order of equal elements is preserved during the sorting process. Merge sort requires additional memory to store the subarrays during the sorting process, making it less space-efficient compared to other sorting algorithms. However, merge sort is efficient and widely used for sorting large datasets due to its excellent time complexity and stability.
+
+## Merge Sort Example - 2
+
+Certainly! Here's another example to practice merge sort:
+
+Example: Sorting an Array using Merge Sort
+
+Consider the following array:
+
+Array: [9, 2, 7, 1, 5]
+
+1. Divide the array into smaller subarrays until each subarray contains only one element.
+
+   - Split the array into two halves: [9, 2] and [7, 1, 5].
+
+   - Continue dividing each subarray until we have subarrays of size 1: [9], [2], [7], [1], [5].
+
+2. Merge the subarrays back together in a sorted order.
+
+   - Merge the two subarrays [9] and [2] into a sorted subarray [2, 9].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 2 is smaller than 9, so we take 2 first, followed by 9.
+     - The merged subarray becomes [2, 9].
+
+   - Merge the subarrays [7] and [1] into a sorted subarray [1, 7].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 1 is smaller than 7, so we take 1 first, followed by 7.
+     - The merged subarray becomes [1, 7].
+
+   - Merge the subarrays [5] and [1, 7] into a sorted subarray [1, 5, 7].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 1 is the smallest element, so we take it first.
+     - Now, we compare the remaining elements: 5 and 7.
+     - 5 is smaller than 7, so we take 5 next, followed by 7.
+     - The merged subarray becomes [1, 5, 7].
+
+3. Repeat the merging process until we obtain the final sorted array.
+
+   - Merge the subarrays [2, 9] and [1, 5, 7] into a sorted subarray [1, 2, 5, 7, 9].
+     - Compare the elements in the two subarrays, starting from the left.
+     - Take the smaller element first and place it in the merged subarray.
+     - In this case, 1 is the smallest element, so we take it first.
+     - Now, we compare the remaining elements: 2 and 5 from the first subarray and 7 and 9 from the second subarray.
+     - 2 is smaller than 5, so we take 2 next, followed by 5.
+     - Finally, we compare the remaining elements: 7 and 9.
+     - 7 is smaller than 9, so we take 7 next, followed by 9.
+     - The merged subarray becomes [1, 2, 5, 7, 9].
+
+4. The final sorted array is: [1, 2, 5, 7, 9].
+
+
+# SESSION 7
