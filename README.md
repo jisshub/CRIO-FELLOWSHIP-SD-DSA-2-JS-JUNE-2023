@@ -2,6 +2,8 @@
 
 https://chat.openai.com/share/11c1993d-11e3-4030-8951-8ee65222ef9f
 
+https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
+
 
 [SESSION-3](#session-3)
 
@@ -1088,3 +1090,8 @@ Array: [9, 2, 7, 1, 5]
 
 
 # SESSION 7
+
+## QUICK SORT
+
+https://www.youtube.com/watch?v=QN9hnmAgmOc
+
