@@ -39,7 +39,10 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 # SESSION 7
 
-[Merge Sort](#merge-sort)
+[Quick Sort](#quick-sort)
+
+[Comparator](#comparator)
+
 
 
 ## Two Pointer Approach
@@ -1091,7 +1094,42 @@ Array: [9, 2, 7, 1, 5]
 
 # SESSION 7
 
-## QUICK SORT
+## Quick Sort
 
 https://www.youtube.com/watch?v=QN9hnmAgmOc
+
+Check notebook for explanation
+
+## Comparator
+
+Check notebook
+
+### Problem
+
+Sort the cars array?
+
+```js
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+cars.sort(function(a, b){
+  let x = a.type.toLowerCase();
+  let y = b.type.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+});
+```
+
+### Solution
+
+The code you provided sorts the cars array of objects based on the type property in ascending order. Here's the output of the code:
+
+[
+  { type: 'BMW', year: 2010 },
+  { type: 'Saab', year: 2001 },
+  { type: 'Volvo', year: 2016 }
+]
 
