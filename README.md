@@ -43,6 +43,7 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 [Comparator](#comparator)
 
+[Merge Interval Pattern](#merge-interval-pattern)
 
 
 ## Two Pointer Approach
@@ -1133,3 +1134,49 @@ The code you provided sorts the cars array of objects based on the type property
   { type: 'Volvo', year: 2016 }
 ]
 
+## Merge Interval Pattern
+
+The "Merge Intervals" pattern in DSA (Data Structure and Algorithms) is a technique used to merge overlapping intervals in an array or list. An interval is represented as a pair of integers [start, end], where start denotes the start point of the interval, and end denotes the end point of the interval. The intervals are often given in sorted order based on their start points.
+
+The goal of the "Merge Intervals" pattern is to merge overlapping intervals and return a new array containing non-overlapping intervals. If intervals are adjacent or have no overlaps, they should remain separate.
+
+Sure! Let's apply the "Merge Intervals" pattern to the given array:
+
+Array: [[1, 3], [8, 10], [2, 6], [15, 18]]
+
+1. Sort the intervals based on their start points:
+
+   - Sorting the array in ascending order of start points: [[1, 3], [2, 6], [8, 10], [15, 18]]
+
+2. Initialize an empty result list to store the merged intervals.
+
+3. Start iterating through the sorted intervals.
+
+4. Merge overlapping intervals:
+
+   - [1, 3] and [2, 6] overlap, so merge them: The merged interval will have the start point as the minimum of the two start points (1) and the end point as the maximum of the two end points (6). The merged interval is [1, 6].
+
+   - Add the merged interval [1, 6] to the result list.
+
+   - [1, 6] and [8, 10] do not overlap, so add [8, 10] to the result list.
+
+   - [8, 10] and [15, 18] do not overlap, so add [15, 18] to the result list.
+
+5. The final merged intervals are: [[1, 6], [8, 10], [15, 18]].
+
+Explanation:
+
+The given array has four intervals: [1, 3], [8, 10], [2, 6], and [15, 18]. After sorting the array based on the start points, we get [[1, 3], [2, 6], [8, 10], [15, 18]].
+
+We then start iterating through the sorted intervals:
+
+1. The first two intervals [1, 3] and [2, 6] overlap since the start point of the second interval (2) is less than or equal to the end point of the first interval (3). So, we merge them into a single interval [1, 6] with start point 1 (minimum of 1 and 2) and end point 6 (maximum of 3 and 6).
+
+2. The merged interval [1, 6] does not overlap with the next interval [8, 10], so we add [8, 10] to the result list.
+
+3. The interval [8, 10] does not overlap with the last interval [15, 18], so we add [15, 18] to the result list.
+
+The final result list contains the merged intervals [[1, 6], [8, 10], [15, 18]].
+
+The "Merge Intervals" pattern is a useful technique for merging overlapping intervals, and it has applications in various fields like scheduling, time intervals, and interval-based problems in computer science and mathematics.
+The "Merge Intervals" pattern is useful in various scenarios, such as merging time intervals, scheduling conflicts, and resource allocations. It has a time complexity of O(n log n) due to the sorting step and an additional O(n) for merging the intervals, where n is the number of intervals.
