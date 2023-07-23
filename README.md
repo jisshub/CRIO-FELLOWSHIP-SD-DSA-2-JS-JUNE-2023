@@ -45,6 +45,7 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 [Merge Interval Pattern](#merge-interval-pattern)
 
+# SESSION 8
 
 ## Two Pointer Approach
 
@@ -1180,3 +1181,72 @@ The final result list contains the merged intervals [[1, 6], [8, 10], [15, 18]].
 
 The "Merge Intervals" pattern is a useful technique for merging overlapping intervals, and it has applications in various fields like scheduling, time intervals, and interval-based problems in computer science and mathematics.
 The "Merge Intervals" pattern is useful in various scenarios, such as merging time intervals, scheduling conflicts, and resource allocations. It has a time complexity of O(n log n) due to the sorting step and an additional O(n) for merging the intervals, where n is the number of intervals.
+
+# SESSION 8
+
+Sure! Binary search is a fundamental searching algorithm used in computer science and data structures. It efficiently searches for a target value in a sorted array by repeatedly dividing the search range in half. Let's go through the binary search algorithm step by step with a simple example:
+
+Example: Suppose we have a sorted array and want to find the index of the target value 25.
+
+Sorted Array: [10, 15, 20, 25, 30, 35, 40]
+
+Step 1: Initialize two pointers, 'left' and 'right,' to the first and last indices of the array, respectively.
+   - left = 0 (index of the first element, 10)
+   - right = 6 (index of the last element, 40)
+
+Step 2: Calculate the mid index by taking the average of 'left' and 'right':
+   - mid = (left + right) // 2 = (0 + 6) // 2 = 3 (index of the middle element, 25)
+
+Step 3: Compare the value at the mid index with the target value (25):
+   - array[mid] = array[3] = 25
+
+Step 4: If the value at the mid index matches the target value, we have found the element, and the search is successful. Return the mid index (3).
+
+Step 5: If the value at the mid index is less than the target value (25), update the 'left' pointer to mid + 1.
+   - left = 3 + 1 = 4
+
+Step 6: If the value at the mid index is greater than the target value (25), update the 'right' pointer to mid - 1.
+   - right = 3 - 1 = 2
+
+Step 7: Repeat steps 2 to 6 until the 'left' pointer becomes greater than the 'right' pointer. This condition indicates that the target value is not present in the array, and the search is unsuccessful. Return -1 to signify that the target is not found.
+
+The binary search algorithm significantly reduces the search space in each iteration by dividing the range in half. It continues this process until the target value is found or the search range becomes empty. Since each step halves the search space, the binary search algorithm has a time complexity of O(log n), where n is the size of the array. This makes binary search very efficient for large sorted arrays and is widely used in many applications, including database indexing, search algorithms, and more.
+
+
+## Binary Search With Unsuccesful Search
+
+Sure! Let's go through the binary search algorithm with a different array example where the target value is not present. We'll search for the target value 22 in the sorted array.
+
+Sorted Array: [5, 10, 15, 20, 25, 30]
+
+Step 1: Initialize 'left' and 'right' pointers.
+   - left = 0 (index of the first element, 5)
+   - right = 5 (index of the last element, 30)
+
+Step 2: Calculate the mid index.
+   - mid = (left + right) // 2 = (0 + 5) // 2 = 2 (index of the middle element, 15)
+
+Step 3: Compare the value at the mid index with the target value (22).
+   - array[mid] = array[2] = 15
+
+Step 4: Since the value at the mid index (15) is less than the target value (22), update the 'left' pointer to mid + 1.
+   - left = 2 + 1 = 3
+
+Step 5: Calculate the new mid index.
+   - mid = (left + right) // 2 = (3 + 5) // 2 = 4 (index of the middle element, 25)
+
+Step 6: Compare the value at the mid index with the target value (22).
+   - array[mid] = array[4] = 25
+
+Step 7: Since the value at the mid index (25) is greater than the target value (22), update the 'right' pointer to mid - 1.
+   - right = 4 - 1 = 3
+
+Step 8: Repeat steps 2 to 7 until the 'left' pointer becomes greater than the 'right' pointer.
+
+Step 9: After the iteration, 'left' is 3 and 'right' is 3. The condition left > right is not satisfied, so the search ends.
+
+Since the 'left' pointer is not greater than the 'right' pointer, it means the target value 22 is not present in the array. Therefore, the search is unsuccessful, and the algorithm returns -1 to indicate that the target value is not found.
+
+The binary search algorithm is efficient in handling unsuccessful searches as well, as it quickly narrows down the search range in each step, reducing the number of comparisons required. This makes binary search a powerful and widely-used searching algorithm for sorted arrays.
+
+
