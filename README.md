@@ -51,6 +51,9 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 [Time Complexity and Space Complexity of Binary Search](#time-complexity-and-Space-Complexity-of-Binary-Search)
 
+[Ternary Search](#ternary-search)
+
+# SESSION 9
 
 ## Two Pointer Approach
 
@@ -1289,4 +1292,67 @@ To summarize:
 - Time complexity: O(log n) - Binary search significantly reduces the search space in each step, resulting in a logarithmic time complexity.
 - Space complexity: O(1) - Binary search uses only a few variables and does not require additional data structures, leading to constant space complexity.
 
+## Ternary Search
+
+Ternary search is a searching algorithm that efficiently finds the maximum or minimum value of a unimodal function within a given range. A unimodal function is one that first increases, then decreases (or vice versa) on the given range.
+
+Let's go through the ternary search algorithm step by step with an example:
+
+Example: Suppose we have a unimodal function f(x) = (x - 3)^2 + 1, and we want to find the minimum value of this function in the range [0, 5].
+
+Step 1: Initialize two pointers, 'left' and 'right,' to the given range.
+
+   - left = 0
+   - right = 5
+
+Step 2: Calculate the two midpoints, 'mid1' and 'mid2,' by dividing the search range into three equal parts.
+
+   - mid1 = left + (right - left) // 3 = 0 + (5 - 0) // 3 = 1
+   - mid2 = right - (right - left) // 3 = 5 - (5 - 0) // 3 = 4
+
+Step 3: Calculate the values of the function at 'mid1' and 'mid2'.
+
+   - f(mid1) = f(1) = (1 - 3)^2 + 1 = 4
+   - f(mid2) = f(4) = (4 - 3)^2 + 1 = 2
+
+Step 4: Compare the values of the function at 'mid1' and 'mid2'.
+
+   - Since f(mid1) > f(mid2), the minimum value must lie in the interval [mid1 + 1, right].
+
+   - Update 'left' to mid1 + 1.
+
+   - left = 1 + 1 = 2
+
+Step 5: Repeat steps 2 to 4 until the range between 'left' and 'right' becomes small enough.
+
+   - Calculate new midpoints:
+     - mid1 = left + (right - left) // 3 = 2 + (5 - 2) // 3 = 3
+     - mid2 = right - (right - left) // 3 = 5 - (5 - 2) // 3 = 4
+
+   - Calculate the values of the function at 'mid1' and 'mid2'.
+     - f(mid1) = f(3) = (3 - 3)^2 + 1 = 1
+     - f(mid2) = f(4) = (4 - 3)^2 + 1 = 2
+
+   - Since f(mid1) < f(mid2), the minimum value must lie in the interval [left, mid2 - 1].
+
+   - Update 'right' to mid2 - 1.
+     - right = 4 - 1 = 3
+
+Step 6: Repeat steps 2 to 5 until the range between 'left' and 'right' becomes small enough.
+
+   - Calculate new midpoints:
+     - mid1 = left + (right - left) // 3 = 2 + (3 - 2) // 3 = 2
+     - mid2 = right - (right - left) // 3 = 3 - (3 - 2) // 3 = 2
+
+   - Calculate the values of the function at 'mid1' and 'mid2'.
+     - f(mid1) = f(2) = (2 - 3)^2 + 1 = 2
+     - f(mid2) = f(2) = (2 - 3)^2 + 1 = 2
+
+   - Since f(mid1) = f(mid2), the minimum value can be at either 'mid1' or 'mid2'.
+
+   - We can return the value of 'mid1' (or 'mid2') as the minimum value.
+
+The ternary search algorithm efficiently narrowed down the search range to find the minimum value of the unimodal function in the given range. It's important to note that the function must be unimodal within the given range for the ternary search to work correctly. The algorithm is particularly useful in problems where the objective is to find an optimal value in a unimodal function with a narrow range.
+
+# SESSION 9
 
