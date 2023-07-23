@@ -49,7 +49,7 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 [Binary Search](#binary-search)
 
-[Time Complexity and Space Complexity of Binary Search](#time-complexity-and-Space-Complexity-of-Binary-Search)
+[Time Complexity and Space Complexity of Binary Search](#time-complexity-and-space-complexity-of-binary-search)
 
 [Ternary Search](#ternary-search)
 
