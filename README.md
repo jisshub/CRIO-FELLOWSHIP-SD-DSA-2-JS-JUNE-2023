@@ -1192,6 +1192,8 @@ The "Merge Intervals" pattern is useful in various scenarios, such as merging ti
 
 # SESSION 8
 
+## Binary Search
+
 Sure! Binary search is a fundamental searching algorithm used in computer science and data structures. It efficiently searches for a target value in a sorted array by repeatedly dividing the search range in half. Let's go through the binary search algorithm step by step with a simple example:
 
 Example: Suppose we have a sorted array and want to find the index of the target value 25.
