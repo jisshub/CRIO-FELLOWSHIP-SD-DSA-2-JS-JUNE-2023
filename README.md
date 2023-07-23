@@ -47,6 +47,11 @@ https://chat.openai.com/c/1d6d109a-1208-4c74-8b07-ff78a171ffb8
 
 # SESSION 8
 
+[Binary Search](#binary-search)
+
+[Time Complexity and Space Complexity of Binary Search](#time-complexity-and-Space-Complexity-of-Binary-Search)
+
+
 ## Two Pointer Approach
 
 In 2 pointer approach, 2-pointers point to specific indices or specific positions in the array.
@@ -1248,5 +1253,40 @@ Step 9: After the iteration, 'left' is 3 and 'right' is 3. The condition left > 
 Since the 'left' pointer is not greater than the 'right' pointer, it means the target value 22 is not present in the array. Therefore, the search is unsuccessful, and the algorithm returns -1 to indicate that the target value is not found.
 
 The binary search algorithm is efficient in handling unsuccessful searches as well, as it quickly narrows down the search range in each step, reducing the number of comparisons required. This makes binary search a powerful and widely-used searching algorithm for sorted arrays.
+
+
+## Time Complexity and Space Complexity of Binary Search
+
+Certainly! Let's discuss the time complexity and space complexity of the binary search algorithm.
+
+Time Complexity:
+The time complexity of the binary search algorithm is O(log n), where n is the size of the input array.
+
+Explanation:
+In each iteration of binary search, the search space is halved. This means that the algorithm eliminates roughly half of the remaining elements in each step. As a result, the number of elements to search reduces exponentially with each iteration.
+
+Let's consider an example of an array with n = 16 elements:
+
+1. Initial search space: 16 elements
+2. After the first iteration: 8 elements
+3. After the second iteration: 4 elements
+4. After the third iteration: 2 elements
+5. After the fourth iteration: 1 element (target found or not)
+
+As you can see, the search space gets halved with each iteration, which leads to a logarithmic reduction in the number of elements to search. Therefore, the time complexity of the binary search algorithm is O(log n).
+
+Binary search is highly efficient for large sorted arrays because it significantly reduces the search space in each step, making it much faster than linear search (O(n)).
+
+Space Complexity:
+The space complexity of the binary search algorithm is O(1), which is constant.
+
+Explanation:
+Binary search does not require any additional data structures that depend on the input size. It only uses a few variables (e.g., 'left,' 'right,' 'mid') to keep track of the search range and perform comparisons. These variables require constant space, regardless of the size of the input array.
+
+In other words, the space used by the binary search algorithm remains constant as the size of the input array increases. Hence, the space complexity is O(1), indicating that the space requirements of the binary search algorithm are very efficient.
+
+To summarize:
+- Time complexity: O(log n) - Binary search significantly reduces the search space in each step, resulting in a logarithmic time complexity.
+- Space complexity: O(1) - Binary search uses only a few variables and does not require additional data structures, leading to constant space complexity.
 
 
